@@ -1,0 +1,18 @@
+<mat-card>
+   <mat-card-content>
+    <p class="description1">Somos una empresa dedicada a ofrecer productos de alta calidad a precios accesibles. 
+      En nuestra tienda encontrarás desde artículos de uso diario hasta productos exclusivos de importación.
+      Aquí tienes algunas de nuestras promociones
+    </p>
+    <div class="product-list">
+      <div class="product" *ngFor="let product of products">
+        <img src="{{product.images[0]}}" alt="{{ product.name }}">
+        <h3>{{ product.title }}</h3>
+        <p class="price">{{ product.price }} €</p>
+        <p class="descriptionProduct">{{ product.description }}</p>
+        <button mat-raised-button class="add-to-cart-btn">Añadir al carrito</button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+

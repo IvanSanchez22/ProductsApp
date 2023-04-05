@@ -3,38 +3,55 @@
     padding: 10px;
     border-bottom: 1px solid #ddd;
     margin-bottom: 20px;
-    
-}
-
-.white-text {
-  color: white;
-}
-
-/*Efecto sobre los botones del menú*/
-.menu-link {
-  position: relative;
-  transition: transform 0.3s ease-out;
-}
-
-.menu-link:hover {
-  transform: translateY(-10px);
-  animation: bounce 0.6s;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(-5px);
   }
-    50% {
-        transform: translateY(-15px);
+
+  .white-text {
+    color: white;
+  }
+
+  /* Efecto sobre los botones del menú */
+  .menu-link {
+    position: relative;
+    transition: transform 0.3s ease-out;
+  }
+
+  .menu-link:hover {
+    transform: translateY(-10px);
+    animation: bounce 0.6s;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(-5px);
     }
-  
-  100% {
-    transform: translateY(-5px);
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
   }
-}
 
-/*Desplaza los elementos del menu hacia la derecha*/
-.menu {
-  margin-left: auto;
-}
+  /* Desplaza los elementos del menú hacia la derecha */
+  .menu {
+    margin-left: auto;
+  }
+
+  /* Media Queries */
+  @media screen and (max-width: 767px) {
+    .menu {
+      display: none;
+    }
+
+    .example-spacer {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .menu {
+      display: flex;
+    }
+  }
+
+  

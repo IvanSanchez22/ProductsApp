@@ -1,0 +1,36 @@
+<form [formGroup]="suggestionForm" (ngSubmit)="onSubmit()" class="suggestion-form">
+  <div class="form-group">
+    <label for="fullName">Nombre completo:</label>
+    <input type="text" id="fullName" formControlName="fullName" class="form-control">
+  </div>
+  
+  <div class="form-group">
+    <label for="suggestionType">Tipo de sugerencia:</label>
+    <mat-form-field appearance="fill" class="form-control">
+      <mat-label>Selecciona una opción</mat-label>
+      <mat-select id="suggestionType" formControlName="suggestionType">
+        <mat-option value="Sugerencia">Sugerencia</mat-option>
+        <mat-option value="Queja">Queja</mat-option>
+        <mat-option value="Felicitación">Felicitación</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  
+  <div class="form-group">
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" formControlName="email" class="form-control">
+  </div>
+  
+  <div class="form-group">
+    <label for="date">Fecha:</label>
+    <input type="date" id="date" formControlName="date" class="form-control">
+  </div>
+
+   <div>
+    <label for="suggestion">Sugerencia:</label>
+    <textarea id="suggestion" formControlName="suggestion" class="form-control"></textarea>
+
+  </div>
+  
+  <button type="submit" class="submit-button">Enviar sugerencia</button>
+</form>

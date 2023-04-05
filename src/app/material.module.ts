@@ -8,18 +8,15 @@ import { MatSelectModule } from '@angular/material/select';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    MatSelectModule,
-    MatFormFieldModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
+  
   ],
   exports: [
    //Aquí van los módulos
@@ -31,7 +28,9 @@ import { MatMenuModule } from '@angular/material/menu';
    MatToolbarModule,
    MatButtonModule,
    MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule,
+    MatSidenavModule
   ]
 })
 export class MaterialModule { }
