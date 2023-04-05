@@ -1,1 +1,25 @@
-<p>clothes works!</p>
+<mat-card>
+  <mat-card-content>
+    <div class="description1">
+      Dentro de esta categoría encontrarás la mejor ropa al mejor precio
+     <mat-form-field appearance="fill" class="form-field-price">
+         <mat-label>Filtre por precio:</mat-label>
+            <mat-select [(ngModel)]="selectedPrecio" (ngModelChange)="filtrarProducts()">
+               <mat-option *ngFor="let precio of filtros" [value]="precio">
+                    {{precio}}
+               </mat-option>
+            </mat-select>
+</mat-form-field>
+
+    </div>
+    <div class="product-list">
+      <div class="product" *ngFor="let product of products">
+        <img src="{{product.images[0]}}" alt="{{ product.name }}">
+        <h3>{{ product.title }}</h3>
+        <p class="price">{{ product.price }} €</p>
+        <p class="descriptionProduct">{{ product.description }}</p>
+        <button mat-raised-button class="add-to-cart-btn">Añadir al carrito</button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
